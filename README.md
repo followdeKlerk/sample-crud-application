@@ -1,2 +1,2 @@
 # CRUD
-Create, Read, Update &amp; Delete using data-jpa, thymelead, web
+Create, Read, Update &amp; Delete using Spring Data-JPA, Spring Thymeleaf, Spring Web
