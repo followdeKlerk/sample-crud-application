@@ -20,10 +20,13 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Name is mandatory")
-    private String name;
+    @NotBlank(message = "First Name is mandatory")
+    private String firstName;
+
+    @NotBlank(message = "Last Name is mandatory")
+    private String lastName;
 
     @NotBlank(message = "Email is mandatory")
     private String email;
-
+    
 }

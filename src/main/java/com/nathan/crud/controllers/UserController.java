@@ -2,6 +2,7 @@ package com.nathan.crud.controllers;
 
 import com.nathan.crud.entities.User;
 import com.nathan.crud.repositories.UserRepository;
+import com.nathan.crud.util.Constants;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,7 +43,7 @@ public class UserController {
         }
 
         userRepository.save(user);
-        return "redirect:/users";
+        return Constants.REDIRECT_USERS;
     }
 
     @GetMapping("/edit/{id}")
@@ -62,7 +63,7 @@ public class UserController {
 
         userRepository.save(user);
 
-        return "redirect:/users";
+        return Constants.REDIRECT_USERS;
     }
 
     @GetMapping("/delete/{id}")
@@ -70,6 +71,6 @@ public class UserController {
         User user = userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
         userRepository.delete(user);
 
-        return "redirect:/users";
+        return Constants.REDIRECT_USERS;
     }
 }
