@@ -1,4 +1,4 @@
-# Simple CRUD Application
+# Sample CRUD Application
 
 ### Create, Read, Update &amp; Delete.
 
